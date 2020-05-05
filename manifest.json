@@ -14,7 +14,7 @@
     }
   ],
   "share_target": {
-    "action": "/share.html",
+    "action": "/share-url-cleaner/share.html",
     "method": "GET",
     "params": {
       "title": "title",
