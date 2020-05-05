@@ -5,7 +5,7 @@ self.addEventListener('install', function(event) {
 				'index.html',
 				'script.js',
 				'share.html',
-				'logo.png'
+				'icon.png'
 			])
 		})
 	);
