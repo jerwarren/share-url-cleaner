@@ -1,7 +1,7 @@
 
 {
-  "name": "Mr. Bell-Ding",
-  "short_name": "Mr. Bell-Ding",
+  "name": "Share Cleaner",
+  "short_name": "Share Cleaner",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#c5ea53",
@@ -11,5 +11,15 @@
       "src": "icon.png",
       "sizes": "512x512",
       "type": "image/png"
-    }]
+    }
+  ],
+  "share_target": {
+    "action": "/share.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
 }
