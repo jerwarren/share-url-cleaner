@@ -14,29 +14,39 @@
     </head>
     <body>
         <style>
-            label,textarea {
+            label, textarea {
                 width: 90%;
                 margin-left: 5%;
+            }
         </style>
+
         <label for="title">Share Title</label>
-        <textarea id="title">[title displayed here]</textarea>
+        <textarea id="title"></textarea>
         <label for="text">Share Text</label>
-        <textarea id="text">[text displayed here]</textarea>
+        <textarea id="text"></textarea>
         <label for="url">Share URL</label>
-        <textarea id="url">[URL displayed here]</textarea>
+        <textarea id="url"></textarea>
 
         <script>
             if('serviceWorker' in navigator) {
               navigator.serviceWorker.register('sw.js');
             }
             window.addEventListener('DOMContentLoaded', () => {
-               const parsedUrl = new URL(window.location);
-               // searchParams.get() will properly handle decoding the values.
+                const parsedUrl = new URL(window.location);
+                
+                // searchParams.get() will properly handle decoding the values.
+                shareTitle = parsedUrl.searchParams.get('title');
+                shareText = parsedUrl.searchParams.get('text');
+                shareURL = parsedUrl.searchParams.get('url');
 
                document.querySelector('#title').innerHTML = parsedUrl.searchParams.get('title');
                document.querySelector('#text').innerHTML = parsedUrl.searchParams.get('text');
                document.querySelector('#url').innerHTML = parsedUrl.searchParams.get('url');
-             });
+                
+               if (shareURL !== null)
+               reShare(shareURL);
+            
+            });
        </script>
 
     </body>
