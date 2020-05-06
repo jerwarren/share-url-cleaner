@@ -1,10 +1,36 @@
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const parsedUrl = new URL(window.location);
+    
+    // searchParams.get() will properly handle decoding the values.
+    shareTitle = parsedUrl.searchParams.get('title');
+    shareText = parsedUrl.searchParams.get('text');
+    shareURL = parsedUrl.searchParams.get('url');
+    
+    if (shareTitle !== null)
+        document.querySelector('#title').innerHTML = shareTitle;
+    
+    if (shareText !== null)
+        document.querySelector('#text').innerHTML = shareText;
+    
+    if (shareURL !== null)
+        document.querySelector('#url').innerHTML = shareURL;
+    
+    if (shareText !== null)
+        reShare(shareText);
+
+});
+
 function reShare(message){
 
     message = cleanText(message);
     console.log(message);
     
     if (navigator.share) {
-            navigator.share({
+        navigator.share({
             url: message,
         })
         .then(() => console.log('Successful share'))
