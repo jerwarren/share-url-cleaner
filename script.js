@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         var shareButton = document.querySelector('#button');
 
-        deleteLink.addEventListener('click', function(event) {
+        shareButton.addEventListener('click', function(event) {
             reShare(ocument.querySelector('#output').innerText);
         });
 
