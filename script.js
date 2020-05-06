@@ -13,7 +13,7 @@ function reShare(message){
 }
 
 function cleanText(message){
-    pattern = /.*(https*:\/\/[^\s]*)[$,\s]*/;
+    pattern = /.*(https*:\/\/[^\s]*)/;
     newMessage = message.replace(pattern,'\$1');
     return newMessage;
 }
