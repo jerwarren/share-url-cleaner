@@ -39,12 +39,12 @@
                 shareText = parsedUrl.searchParams.get('text');
                 shareURL = parsedUrl.searchParams.get('url');
 
-               document.querySelector('#title').innerHTML = parsedUrl.searchParams.get('title');
-               document.querySelector('#text').innerHTML = parsedUrl.searchParams.get('text');
-               document.querySelector('#url').innerHTML = parsedUrl.searchParams.get('url');
+               document.querySelector('#title').innerHTML = shareTitle;
+               document.querySelector('#text').innerHTML = shareText;
+               document.querySelector('#url').innerHTML = shareUrl;
                 
-               if (shareURL !== null)
-               reShare(shareURL);
+               if (shareText !== null)
+               reShare(shareText);
             
             });
        </script>
