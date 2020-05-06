@@ -20,7 +20,13 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#url').innerHTML = shareURL;
     
     if (shareText !== null)
-        reShare(shareText);
+        document.querySelector('#output').innerHTML = cleanText(shareText);
+
+        var shareButton = document.querySelector('#button');
+
+        deleteLink.addEventListener('click', function(event) {
+            reShare(ocument.querySelector('#output').innerText);
+        });
 
 });
 
