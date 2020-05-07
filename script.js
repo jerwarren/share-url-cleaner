@@ -25,14 +25,13 @@ window.addEventListener('DOMContentLoaded', () => {
         var shareButton = document.querySelector('#button');
 
         shareButton.addEventListener('click', function(event) {
-            reShare(ocument.querySelector('#output').innerText);
+            reShare(document.querySelector('#output').innerText);
         });
 
 });
 
 function reShare(message){
-
-    message = cleanText(message);
+    //message = cleanText(message);
     console.log(message);
     
     if (navigator.share) {
