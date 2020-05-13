@@ -3,8 +3,8 @@ self.addEventListener('install', function(event) {
 		caches.open('sw-cache').then(function(cache) {
 			return cache.addAll([
 				'index.html',
-				'script.js',
-				'share.html',
+				//'script.js',
+				//'share.html',
 				'icon.png'
 			])
 		})
