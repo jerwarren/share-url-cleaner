@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function reShare(message){
-    //message = cleanText(message);
+    message = cleanText(message);
     console.log(message);
     
     if (navigator.share) {
