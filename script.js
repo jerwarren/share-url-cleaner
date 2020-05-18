@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
         var shareButton = document.querySelector('#button');
 
         shareButton.addEventListener('click', function(event) {
-            reShare(document.querySelector('#output').innerText);
+            reShare(document.querySelector('#output').innerHTML);
         });
 
 });
